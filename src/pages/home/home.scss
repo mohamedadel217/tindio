@@ -1,3 +1,26 @@
 page-home {
-
+    ion-card {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        height: auto;
+        margin: 0 !important;
+        text-align: center;
+        box-shadow: 1px !important;
+      }
+      .itemName {
+        margin: 5px 0 5px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .price {
+        font-size: 1.5rem;
+        color: blue;
+        font-weight: bold;
+      }
+      .storeName {
+        color: gray;
+      }
+      
 }
