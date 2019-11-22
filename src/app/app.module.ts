@@ -9,6 +9,10 @@ import { HomePage } from '../pages/home/home';
 import { HelperMethodsProvider } from '../providers/helper-methods/helper-methods';
 import { DataProvider } from '../providers/data/data';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AuthProvider } from '../providers/auth/auth';
+import { environment } from './environments/environment';
+// import { AngularFireModule } from '@angular/fire';
+import { LoginPageModule } from '../pages/login/login.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +22,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    LoginPageModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,11 +35,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     HttpClient,
+    LoginPageModule,
     HttpClientModule,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HelperMethodsProvider,
-    DataProvider
+    DataProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}
