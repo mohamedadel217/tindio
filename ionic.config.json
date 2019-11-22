@@ -1,0 +1,7 @@
+{
+  "name": "tindioTask",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
