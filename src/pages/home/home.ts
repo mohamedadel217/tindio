@@ -44,6 +44,8 @@ export class HomePage {
 
     }, error => {
       console.log(error);
+      this.helperMethods.dismissLoading();
+
       this.helperMethods.presentToast("There is error please try again")
 
     }
@@ -54,7 +56,7 @@ export class HomePage {
 
       this.id++;
       console.log(this.id);
-      this.loadData(this.id,false);
+      this.loadData(this.id, false);
       infiniteScroll.complete();
     }, 1000);
   }
